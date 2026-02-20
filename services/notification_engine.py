@@ -25,12 +25,23 @@ def notify_if_near_turn(patients):
 
     for index, patient in enumerate(patients):
 
-        if index <= 1 and patient["status"] == "waiting":
+        if index <= 2 and patient["status"] == "waiting":
 
-            message = (
-                f"Hello {patient['name']}, "
-                "your hospital turn is coming soon."
-            )
+            if index == 0:
+                message = (
+                    f"Hello {patient['name']}, "
+                    "you are next in the queue. Please be ready."
+                )
+            elif index == 1:
+                message = (
+                    f"Hello {patient['name']}, "
+                    "your turn is 1 number away."
+                )
+            else:
+                message = (
+                    f"Hello {patient['name']}, "
+                    f"your turn is {index} numbers away."
+                )
 
             send_sms(patient["phone"], message)
 
