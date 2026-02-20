@@ -116,10 +116,10 @@ def get_next_token(department_id):
         patients_for_queue.append(queue_dict)
         patients_for_notify.append(notify_dict)
 
-    # 🔥 SMART QUEUE DECISION
+    #SMART QUEUE DECISION
     next_patient = get_next_patient(patients_for_queue)
 
-    # 🔔 SEND SMS (PLACE 2)
+    #SEND SMS (PLACE 2)
     notify_if_near_turn(patients_for_notify)
 
     return {

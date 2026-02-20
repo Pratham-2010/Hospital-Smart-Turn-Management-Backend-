@@ -8,7 +8,6 @@ department_bp = Blueprint(
     url_prefix="/department"
 )
 
-# ➕ Add Department
 @department_bp.route("/add", methods=["POST"])
 def add_department():
     data = request.get_json()
@@ -37,7 +36,6 @@ def add_department():
     }), 201
 
 
-# 📋 List Departments
 @department_bp.route("/all", methods=["GET"])
 def list_departments():
     departments = db.session.query(Department).all()

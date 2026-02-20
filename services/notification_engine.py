@@ -2,9 +2,9 @@
 from twilio.rest import Client
 import os
 
-ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-FROM_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+ACCOUNT_SID = os.getenv("ACCOUNT_SID")
+AUTH_TOKEN = os.getenv("AUTH_TOKEN")
+FROM_NUMBER = os.getenv("FROM_NUMBER")
 
 
 
