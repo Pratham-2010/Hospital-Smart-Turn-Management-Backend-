@@ -26,6 +26,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
 
+
 # register blueprints
 app.register_blueprint(department_bp)
 app.register_blueprint(patient_bp)
